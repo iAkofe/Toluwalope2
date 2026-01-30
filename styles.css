@@ -1065,21 +1065,21 @@ body[data-theme="dark"] .nav-pill.active {
   }
 
   .site-header {
-    grid-template-columns: 1fr;
-    align-items: start;
-    gap: 14px;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 10px;
   }
 
   .theme-toggle {
-    width: 38px;
-    height: 38px;
-    justify-self: start;
+    grid-column: 3;
+    justify-self: end;
   }
 
   .header-actions {
     gap: 10px;
-    flex-wrap: wrap;
-    justify-self: start;
+    flex-wrap: nowrap;
+    justify-self: end;
+    display: none;
   }
 
   .hero {
