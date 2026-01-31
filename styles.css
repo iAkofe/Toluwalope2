@@ -525,7 +525,7 @@ body[data-theme="dark"] .services-icon:hover {
   border: none;
   display: grid;
   grid-template-columns: 50px 1fr 60px;
-  align-items: center;
+  align-items: start;
   padding: 18px 20px;
   font-size: 13px;
   text-transform: uppercase;
@@ -534,8 +534,22 @@ body[data-theme="dark"] .services-icon:hover {
   color: var(--ink);
 }
 
+.service-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
 .service-name {
   font-weight: 600;
+}
+
+.service-date {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0.4px;
+  color: var(--muted);
 }
 
 .service-plus {
@@ -930,6 +944,17 @@ body[data-theme="dark"] .footer-links a {
   }
 }
 
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(18px);
@@ -941,6 +966,46 @@ body[data-theme="dark"] .footer-links a {
   transform: translateY(0);
 }
 
+.projects-animate .projects-header,
+.projects-animate .projects-footer,
+.projects-animate .projects-grid .project-tile {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fade-up 0.7s ease forwards;
+}
+
+.projects-animate .projects-header {
+  animation-delay: 0.1s;
+}
+
+.projects-animate .projects-grid .project-tile:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.projects-animate .projects-grid .project-tile:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.projects-animate .projects-grid .project-tile:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.projects-animate .projects-grid .project-tile:nth-child(4) {
+  animation-delay: 0.5s;
+}
+
+.projects-animate .projects-grid .project-tile:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+.projects-animate .projects-grid .project-tile:nth-child(6) {
+  animation-delay: 0.7s;
+}
+
+.projects-animate .projects-footer {
+  animation-delay: 0.8s;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .marquee-track {
     animation: none;
@@ -950,6 +1015,14 @@ body[data-theme="dark"] .footer-links a {
     opacity: 1;
     transform: none;
     transition: none;
+  }
+
+  .projects-animate .projects-header,
+  .projects-animate .projects-footer,
+  .projects-animate .projects-grid .project-tile {
+    opacity: 1;
+    transform: none;
+    animation: none;
   }
 }
 
@@ -1152,6 +1225,7 @@ body[data-theme="dark"] .nav-pill.active {
     transform: none;
     max-width: none;
     border-radius: 0;
+    padding: 18px 16px;
   }
 
   .site-footer {
@@ -1169,13 +1243,13 @@ body[data-theme="dark"] .nav-pill.active {
   }
 
   .bottom-nav {
-    gap: 4px;
-    padding: 4px;
+    gap: 8px;
+    padding: 20px 18px;
   }
 
   .nav-pill {
-    padding: 8px 12px;
-    font-size: 13px;
+    padding: 12px 16px;
+    font-size: 14px;
   }
 
   .project-chip {
