@@ -1061,7 +1061,19 @@ body[data-theme="dark"] .bottom-nav {
   color: #fff;
 }
 
+.nav-pill.active:hover,
+.nav-pill.active:focus,
+.nav-pill.active:focus-visible {
+  color: #fff;
+}
+
 body[data-theme="dark"] .nav-pill.active {
+  color: #141312;
+}
+
+body[data-theme="dark"] .nav-pill.active:hover,
+body[data-theme="dark"] .nav-pill.active:focus,
+body[data-theme="dark"] .nav-pill.active:focus-visible {
   color: #141312;
 }
 
@@ -1160,8 +1172,10 @@ body[data-theme="dark"] .nav-pill.active {
   }
 
   .hero-cta {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
   .inline-icon svg {
