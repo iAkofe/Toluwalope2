@@ -854,6 +854,7 @@ body[data-theme="dark"] .contact {
 .contact-actions {
   margin-top: 16px;
   display: grid;
+  max-width: 170px;
   gap: 14px;
 }
 
