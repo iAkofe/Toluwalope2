@@ -135,6 +135,7 @@ body[data-theme="dark"] .toggle-track {
   text-decoration: none;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
 }
 
@@ -847,7 +848,8 @@ body[data-theme="dark"] .contact {
 
 .contact-copy {
   font-size: 13px;
-  line-height: 1.6;
+  line-height: 1.8;
+  max-width: 450px;
   color: var(--muted);
 }
 
@@ -865,8 +867,16 @@ body[data-theme="dark"] .contact {
 }
 
 .social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: var(--ink);
   text-decoration: none;
+}
+
+.social-links a i {
+  font-size: 14px;
+  line-height: 1;
 }
 
 body[data-theme="dark"] .social-links a {
